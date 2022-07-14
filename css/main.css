@@ -88,7 +88,7 @@ body {
 .hero-section {
     position: relative;
     padding-top: 156px;
-    padding-bottom: 265px;
+    padding-bottom: 255px;
     background-image: url("../images/hero-bg.png");
 }
 
@@ -139,7 +139,8 @@ body {
 /* Our Collection */
 
 .collection-section {
-    padding-top: 20px;
+    background-image: url("../images/collection-bg.png");
+    margin: 20px;
 }
 
 .collection-wrapper {
