@@ -1,0 +1,244 @@
+:root {
+    --font-weight-regular: 400;
+    --font-wight-normal: 500;
+    --btn-border-radius: 100px;
+    --main-text-color: #333333;
+    --text-color-black: #000;
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    font-weight: 400;
+    src: url("../fonts/roboto-v30-latin-regular.woff2") format("woff2"),
+        url("../fonts/roboto-v30-latin-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    font-weight: 500;
+    src: url("../fonts/roboto-v30-latin-500.woff2") format("woff2"),
+        url("../fonts/roboto-v30-latin-500.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Roboto";
+    font-display: swap;
+    font-weight: 700;
+    src: url("../fonts/roboto-v30-latin-700.woff2") format("woff2"),
+        url("../fonts/roboto-v30-latin-700.woff") format("woff");
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Roboto";
+    font-weight: 700;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1340px;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
+/* Site Header */
+
+.site-header {
+    background-image: url("../images/hero-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-inner {
+    width: 100%;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-list {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header-item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.header-item-link {
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-size: 12px;
+}
+
+
+/* Hero */
+
+
+.hero-section {
+    position: relative;
+    padding-top: 156px;
+    padding-bottom: 265px;
+    background-image: url("../images/hero-bg.png");
+}
+
+.hero-text-wrap {
+    width: 464px;
+    margin-left: 90px;
+}
+
+.hero-title {
+    margin: 0;
+    margin-bottom: 24px;
+    font-size: 64px;
+}
+
+.hero-text {
+    margin: 0;
+    margin-bottom: 34px;
+    font-weight: var(--font-weight-regular);
+}
+
+.hero-link {
+    display: inline-block;
+    padding: 16px 24px;
+    font-weight: var(--font-wight-normal);
+    border-radius: var(--btn-border-radius);
+    background-color: #0A775F;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-img {
+    position: absolute;
+    top: 35px;
+    right: calc(50% - 759px);
+}
+
+.hero-img::before {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-image: url("../images/alfred.png");
+    background-repeat: no-repeat;
+    background-size: 160px 160px;
+    transform: translate(-45%, -45%);
+    content: "";
+}
+
+/* Our Collection */
+
+.collection-section {
+    padding-top: 20px;
+}
+
+.collection-wrapper {
+    width: 1400px;
+    margin: 0 auto;
+    background-image: url("../images/collection-bg.png");
+}
+
+.collection-title-wrap {
+    text-align: center;
+    padding: 50px 0px;
+}
+
+.collection-title {
+    margin: 0;
+    margin-bottom: 83px;
+    font-size: 50px;
+}
+
+.collection-list {
+    margin: 0;
+    padding: 0;
+}
+
+.collection-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 143px;
+}
+
+.collection-item:nth-child(even) {
+    margin-left: 300px;
+}
+
+.collection-item::before {
+    position: absolute;
+    width: 402px;
+    height: 300px;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.collection-item:first-child::before {
+    background-image: url("../images/leaf-danche.svg");
+    top: 0;
+    transform: translateX(-90%) translateY(-50%);
+}
+
+.collection-item:nth-child(2)::after {
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    width: 392px;
+    height: 477px;
+    background-image: url("../images/leaf-gran.svg");
+    background-repeat: no-repeat;
+    transform: translateX(60%) translateY(50%);
+    content: "";
+}
+
+.collection-item:nth-child(3)::after {
+    position: absolute;
+    right: 0;
+    width: 392px;
+    height: 477px;
+    background-image: url("../images/leaf-piccolli.svg");
+    background-repeat: no-repeat;
+    transform: translateX(90%) translateY(0%);
+    content: "";
+}
+
+.collection-item:last-child::before {
+    top: 0;
+    left: 0;
+    background-image: url("../images/leaf-planalto.svg");
+    transform: translateX(-140%) translateY(-10%);
+}
+
+.collection-item-img {
+    margin-right: 117px;
+}
+
+.collection-item-text-wrap {
+    width: 453px;
+}
+
+.collection-item-title {
+    margin: 0;
+    margin-bottom: 10px;
+    color: var(--main-text-color);
+    font-size: 48px;
+    font-weight: var(--font-wight-normal);
+}
+
+.collection-item-text {
+    margin: 0;
+    color: var(--main-text-color);
+    line-height: 34px;
+    font-size: 22px;
+    font-weight: var(--font-weight-regular);
+}
