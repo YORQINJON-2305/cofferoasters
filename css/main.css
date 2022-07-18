@@ -55,89 +55,103 @@ body {
 /* Site Header */
 
 .site-header {
+    padding: 40px 0;
     background-image: url("../images/hero-bg.png");
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
-.header-inner {
-    width: 100%;
-    padding-top: 40px;
+
+.site-header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.header-list {
+.sitenav-list {
     display: flex;
     align-items: center;
     margin: 0;
-    padding: 0;
+    padding-left: 0;
     list-style: none;
 }
 
-.header-item:not(:last-child) {
-    margin-right: 40px;
+.sitenav-link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #333333;
+    text-decoration: none;
 }
 
-.header-item-link {
+.sitenav-item:nth-child(2) {
+    margin: 0 40px;
+}
+
+.create-plan {
+    display: inline-block;
+    padding: 16px 24px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
     text-decoration: none;
-    color: var(--main-text-color);
-    font-size: 12px;
-    font-weight: var(--font-weight-bold);
+    border-radius: 100px;
 }
 
 
 /* Hero */
 
 
-.hero-section {
-    position: relative;
-    padding-top: 156px;
-    padding-bottom: 255px;
+.hero {
+    padding-left: 100px;
     background-image: url("../images/hero-bg.png");
 }
 
-.hero-text-wrap {
-    width: 464px;
-    margin-left: 90px;
+.hero-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-info-wrapper {
+    width: 465px;
 }
 
 .hero-title {
-    margin: 0;
     margin-bottom: 24px;
+    font-weight: 700;
     font-size: 64px;
+    line-height: 75px;
 }
 
-.hero-text {
-    margin: 0;
+.hero-desc {
     margin-bottom: 34px;
+    line-height: 24px;
 }
 
 .hero-link {
-    display: inline-block;
-    padding: 16px 24px;
-    font-weight: var(--font-wight-normal);
-    border-radius: var(--btn-border-radius);
     background-color: #0A775F;
-    color: #fff;
-    text-decoration: none;
 }
 
-.hero-img {
-    position: absolute;
-    top: 35px;
-    right: calc(50% - 759px);
+
+.hero-img-box {
+    position: relative;
+    z-index: 1;
+    right: -5%;
 }
 
-.hero-img::before {
+.hero-img-box::before {
     position: absolute;
+    top: -9%;
+    left: -10%;
+    z-index: 2;
     width: 160px;
     height: 160px;
-    background-image: url("../images/alfred.png");
+    background-image: url("../images/hero-img-alfred.png");
     background-repeat: no-repeat;
-    background-size: 160px 160px;
-    transform: translate(-45%, -45%);
+    background-size: contain;
+    /* transform: translate(-43% , -38%); */
     content: "";
 }
 
@@ -491,3 +505,207 @@ body {
 .footer-link-item:not(:last-child) {
     margin-right: 30px;
 }
+
+
+
+
+/* *************************** */
+
+    /* ABOUT US START    */
+
+/* *************************** */
+
+/* ABOUT START */
+
+.about-us-text-wrap{
+    width: 372px;
+}
+
+
+/* OUR COMMITMENT START */
+
+.commitment{
+    margin: 20px 20px 160px 20px;
+    background-image: url("../images/collection-bg.png");
+    padding: 160px 0px 200px 0px;
+}
+
+.commitment-wrap{
+    position: relative;
+    background-image: url("../images/cup-coffe.png");
+    background-repeat: no-repeat;
+    background-position: calc(50% - 330px);
+}
+
+.commitment-wrap::before{
+    position: absolute;
+    top: -100px;
+    left: -220px;
+    width: 402px;
+    height: 300px;
+    background-image: url("../images/leaf-danche.svg");
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.commitment-text-wrap{
+    width: 626px;
+    margin-left: auto;
+}
+
+.commitment-title{
+    margin: 0;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.commitment-text{
+    font-size: 18px;
+    color: var(--main-text-color);
+    line-height: 30px;
+}
+
+/* Uncompromising quality */
+
+.quality{
+    margin: 20px;
+    background-image: url("../images/choose-us-bg.jpg");
+}
+
+.quality-wrap{
+    position: relative;
+    display: flex;
+    padding: 100px 0px 118px 0px;
+}
+
+.quality-wrap::after{
+    position: absolute;
+    top: -80px;
+    right: -120px;
+    width: 550px;
+    height: 500px;
+    background-image: url("../images/shipping.jpg");
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.quality-text-wrap{
+    width: 639px;
+    margin-left: 120px;
+}
+
+.quality-title-wrap{
+    width: 397px;
+}
+
+.quality-title{
+    margin: 0;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    font-size: 50px;
+    color: #fff;
+    line-height: 59px;
+}
+
+.quality-text{
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+    line-height: 30px;
+    opacity: 0.8;
+}
+
+/* Our headquarters */
+
+.headquarters{
+    margin: 20px 20px 50px 20px;
+    padding: 50px 0px 100px 0px;
+    background-image: url("../images/works-bg.png");
+}
+
+.headquarters-title{
+    margin: 0;
+    margin-bottom: 80px;
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    line-height: 59px;
+    text-transform: uppercase;
+}
+
+.headquarters-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.headquarters-item {
+    position: relative;
+    width: 433px;
+    margin-right: 20px;
+    padding: 140px 50px 40px 20px;
+    background-color: #F8F8F2;
+}
+
+.headquarters-item:not(:first-child){
+    padding-top: 187px;
+}
+
+.headquarters-item::before {
+    position: absolute;
+    top: 45px;
+    right: 55px;
+    width: 120px;
+    height: 143px;
+    background-image: url("../images/united-kindom.svg");
+    background-repeat: no-repeat;
+    margin-bottom: 45px;
+    content: "";
+}
+
+.headquarters-item:nth-child(2)::before {
+    height: 120px;
+    background-image: url("../images/canada.svg");
+}
+
+.headquarters-item:last-child::before {
+    height: 107px;
+    background-image: url("../images/australia.svg");
+}
+
+.headquarters-item:last-child{
+    margin-right: 0;
+}
+
+.headquarters-item-title-wrap{
+    width: 230px;
+}
+
+.headquarters-item-title{
+    margin: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 40px;
+}
+
+.headquarters-text-list{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.headquarters-text-item{
+    color: var(--main-text-color);
+    line-height: 28px;
+}
+
+.headquarters-phone-link{
+    color: var(--main-text-color);
+    text-decoration: none;
+}
+
