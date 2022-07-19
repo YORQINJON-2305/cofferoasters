@@ -27,7 +27,7 @@
               <a class="sitenav-link" href="about.html">ABOUT US</a>
             </li>
             <li class="sitenav-item">
-              <a class="sitenav-link" href="#">Create your plan</a>
+              <button class="sitenav-link modal-open-btn" type="button">Create your plan</button>
             </li>
           </ul>
         </nav>
@@ -252,6 +252,31 @@
       </div>
     </div>
   </footer>
+
+
+  <!-- MODAL START -->
+
+  <div class="modal">
+    <div class="modal-window">
+      <div class="modal-title-wrap">
+        <h3 class="modal-title">ORDER SUMMARY</h3>
+      </div>
+      <div class="modal-text-wrap">
+        <h4 class="modal-text-bold">“I drink my coffee as <span class="modal-text-green">Filter</span>, with a <span
+            class="modal-text-green">Decaf</span> type of bean. <span class="modal-text-green">250g</span> ground ala
+          <span class="modal-text-green">Cafetiére</span>, sent to me <span class="modal-text-green">Every Week.</span>
+          ”</h4>
+        <p class="modal-text">Is this correct? You can proceed to checkout or go back to plan selection if something is
+          off. Subscription discount codes can also be redeemed at the checkout. </p>
+        <div class="modal-bottom-wrap">
+          <strong class="modal-price">$14.00/ mo</strong>
+          <button class="close-btn js-close-btn" type="submit">CHECKOUT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
 
 </html>
