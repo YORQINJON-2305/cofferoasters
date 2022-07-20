@@ -46,6 +46,16 @@ body {
     overflow-x: hidden;
 }
 
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
 .container {
     max-width: 1340px;
     margin: 0 auto;
@@ -82,12 +92,6 @@ body {
     text-transform: uppercase;
     color: #333333;
     text-decoration: none;
-}
-
-.modal-open-btn {
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
 }
 
 .sitenav-item:nth-child(2) {
@@ -350,6 +354,7 @@ body {
 /* How it works */
 
 .works-section {
+    margin: 20px;
     margin-bottom: 50px;
     padding: 50px 0px;
     background-image: url("../images/works-bg.png");
@@ -371,7 +376,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 966px;
+    width: 938px;
     margin-bottom: 20px;
     background-image: url("../images/dotted.svg");
     background-repeat: no-repeat;
@@ -389,7 +394,7 @@ body {
 
 .works-list {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space; */
     align-items: center;
     margin: 0;
     margin-bottom: 60px;
@@ -399,9 +404,14 @@ body {
 
 .works-item {
     position: relative;
-    width: 394px;
+    width: 433px;
+    margin-right: 20px;
     padding: 20px 20px 40px 20px;
     background-color: #F8F8F2;
+}
+
+.works-item:last-child {
+    margin-right: 0;
 }
 
 .works-item::before {
@@ -735,19 +745,18 @@ body {
 .open-modal {
     opacity: 1;
     pointer-events: all;
-    animation-name: openModal;
-    animation-duration: 1s;
-    animation-timing-function: ease;
-    animation-fill-mode: forwards;
-    animation-delay: 0.3s;
 }
 
 .modal-window {
-    position: relative;
-    top: -561px;
+    margin: 0 auto;
+    margin-top: 157px;
     width: 561px;
     background-color: #fff;
-    margin: 0 auto;
+    animation-name: openModal;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    /* animation-fill-mode: forwards; */
+    animation-delay: 0.3s;
 }
 
 .modal-title-wrap {
@@ -812,10 +821,230 @@ body {
 
 @keyframes openModal {
     0% {
-        padding-top: 0px;
+        transform: translateY(-300px);
     }
 
     100% {
-        padding-top: 700px;
+        transform: translateY(0px);
     }
+}
+
+
+/* ******************** */
+/* CREATE-PLAN */
+/* ******************** */
+
+.create-works{
+    margin-bottom: 20px;
+}
+
+.create-choose-anyone {
+    padding-top: 30px;
+    background-position: calc(50%) calc(50% + 15px);
+}
+
+.create-work-list {
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.enjoy::after {
+    opacity: 0;
+}
+
+
+/* QUESTION SECTION START */
+
+.question {
+    position: relative;
+    margin: 20px 20px 50px 20px;
+    padding: 50px 0px;
+    background-image: url("../images/collection-bg.png");
+}
+
+
+.question-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-wrap::before{
+    position: absolute;
+    top: 714px;
+    left: calc(50% - 900px);
+    width: 400px;
+    height: 300px;
+    background-image: url("../images/leaf-danche.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.question-order-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.question-order-text {
+    font-size: 28px;
+    font-weight: 500;
+    color: #555555;
+    line-height: 33px;
+}
+
+.preferences {
+    margin: 0;
+    color: #000;
+}
+
+.preferences::after {
+    width: 196px;
+    height: 3px;
+    display: block;
+    background-image: url("../images/question-underline.svg");
+    background-repeat: no-repeat;
+    content: "";
+}
+
+.question-form {
+    margin-right: 80px;
+}
+
+.question-details {
+    position: relative;
+    margin-bottom: 60px;
+}
+
+.drink-coffe::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 391px;
+    height: 476px;
+    background-image: url("../images/leaf-gran.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translateX(115%) translateY(-5%);
+    content: "";
+}
+
+.type-coffe::after{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 252px;
+    height: 214px;
+    background-image: url("../images/leaf-piccolli.svg");
+    background-repeat: no-repeat;
+    transform: translateX(125%) translateY(-40%);
+    content: "";
+}
+
+
+
+.details-end {
+    margin-bottom: 100px;
+}
+
+.question-text {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 47px;
+    letter-spacing: -1px;
+    list-style: none;
+    cursor: pointer;
+}
+
+.question-text::after {
+    display: block;
+    width: 18px;
+    height: 10px;
+    margin-left: 55px;
+    background-image: url("../images/arrow-bottom.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+}
+
+.question-radio-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.question-radio-input:checked~.custom-radio {
+    background-color: #0A775F;
+    color: #fff;
+}
+
+.custom-radio {
+    display: block;
+    width: 205px;
+    height: 220px;
+    margin-right: 20px;
+    padding: 30px 32px 80px 15px;
+    background-image: url("../images/question-bg.png");
+    cursor: pointer;
+}
+
+.custom-radio-subtitle {
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+.custom-radio-descr {
+    font-size: 18px;
+}
+
+.order-summary-wrap {
+    width: 660px;
+    margin-bottom: 20px;
+    padding: 40px 20px;
+    background-color: #C99B67;
+}
+
+.order-summary-subtitle {
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 19px;
+}
+
+.order-summary-descr {
+    font-weight: 500;
+    line-height: 34px;
+    font-size: 24px;
+    color: #fff;
+
+}
+
+.summary-text-black {
+    color: var(--main-text-color);
+    border-bottom: 2px solid #333333;
+}
+
+.create-btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.create-btn {
+    margin-right: 6px;
+    padding: 16px 24px;
+    background-color: #0A775F;
+    font-weight: var(--font-wight-bold);
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
 }
