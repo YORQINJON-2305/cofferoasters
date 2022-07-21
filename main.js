@@ -10,6 +10,6 @@ elCloseModal.addEventListener("click", function(){
     elModal.classList.remove("open-modal")
 })
 
-elModal.addEventListener("click", function(){
-    elModal.classList.remove("open-modal")
-})
+// elModal.addEventListener("click", function(){
+//     elModal.classList.remove("open-modal")
+// })
